@@ -9,10 +9,10 @@ module CBTRUBY
 
     def to_s
       if @platform.nil?
-        string = "#{@platform}|#{@browser}#{@version}"
-      else
         string = "#{@browser}#{@version}"
         return string
+      else
+        string = "#{@platform}|#{@browser}#{@version}"
       end
       if @resolution.nil?
         return string

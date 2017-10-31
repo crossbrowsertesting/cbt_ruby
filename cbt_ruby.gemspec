@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'cbt_ruby'
-  s.version = '0.1.0'
+  s.version = '0.1.0.1'
   s.date = '2017-10-31'
   s.summary = 'A gem for interacting with the CrossBrowserTesting.com API'
   s.authors = ['Harold Schreckengost']
