@@ -8,17 +8,17 @@ module CBTRUBY
     end
 
     def to_s
-      string = "#{@browser}#{@version}"
       if @platform.nil?
+        string = "#{@platform}|#{@browser}#{@version}"
+      else
+        string = "#{@browser}#{@version}"
+        return string
+      end
+      if @resolution.nil?
         return string
       else
-        string += "|#{@platform}"
-        if @resolution.nil?
-          return string
-        else
-          string += "|#{@resolution}"
-          return string
-        end
+        string += "|#{@resolution}"
+        return string
       end
     end
   end

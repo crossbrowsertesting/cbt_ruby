@@ -59,7 +59,7 @@ As of version 0.0.5, the gem includes a ````csv_to_browsers```` parser that will
 ##### Using csv_to_browsers
 ````csv_to_browsers```` takes a single ````file```` parameter.  This should be a string containing the name and location of the CSV file to parse.
 
-````browsers = CBTRUBY::csv_to_browsers(file:"example.csv")````
+````browsers = CBTRUBY::csv_to_browsers(filename:"example.csv")````
 
 ### CbtClient::ScreenshotTest
 This object begins and represents a screenshot test.

@@ -45,10 +45,9 @@ module CBTRUBY
       else
         puts response.code
         puts response.body
-        abort("Invalid Response")
+        abort('Invalid Response')
       end
     end
-
   end
 end
 
@@ -56,3 +55,6 @@ require_relative 'cbt_ruby/browser'
 require_relative 'cbt_ruby/browsers'
 require_relative 'cbt_ruby/screenshot_info'
 require_relative 'cbt_ruby/screenshot_test'
+require_relative 'cbt_ruby/csv_to_browsers.rb'
+require_relative 'cbt_ruby/browser_queries.rb'
+require_relative 'cbt_ruby/screenshot_history.rb'

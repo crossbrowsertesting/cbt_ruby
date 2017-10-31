@@ -28,13 +28,13 @@ module CBTRUBY
 
     def begin
       @test = @client.basic_request(url: 'screenshots', reqMethod: POST, data: @params)
-      #puts @test
+      # puts @test
       @info = CBTRUBY::CbtClient::ScreenshotInfo.new(client: @client, session: @test['screenshot_test_id'])
       if @block
         @running = true
         wait_for_finish
       end
-      return @info.request
+      @info.request
     end
 
     # Block until test is finished

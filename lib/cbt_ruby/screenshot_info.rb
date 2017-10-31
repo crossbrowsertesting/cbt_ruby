@@ -11,7 +11,7 @@ module CBTRUBY
 
     def running
       status = request
-      #puts status
+      # puts status
       status['versions'][0]['active']
     end
   end
