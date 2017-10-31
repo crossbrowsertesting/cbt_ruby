@@ -17,6 +17,7 @@ module CBTRUBY
       self.begin
     end
 
+    # Format parameters for passing on
     def format_params
       @params[:browsers] = @params[:browsers].to_s if @params[:browsers]
 
@@ -27,7 +28,7 @@ module CBTRUBY
 
     def begin
       @test = @client.basic_request(url: 'screenshots', reqMethod: POST, data: @params)
-      puts @test
+      #puts @test
       @info = CBTRUBY::CbtClient::ScreenshotInfo.new(client: @client, session: @test['screenshot_test_id'])
       if @block
         @running = true
@@ -36,6 +37,7 @@ module CBTRUBY
       return @info.request
     end
 
+    # Block until test is finished
     def wait_for_finish
       while @running
         sleep 15

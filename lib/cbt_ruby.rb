@@ -45,7 +45,7 @@ module CBTRUBY
       else
         puts response.code
         puts response.body
-        return JSON.parse(response.body)
+        abort("Invalid Response")
       end
     end
 
